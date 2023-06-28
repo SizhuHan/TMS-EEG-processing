@@ -144,7 +144,7 @@ for nc = 5
             end
         end
         k=k+1;
-        save(['AvgSource_' cond{1,nc} '_sub' sub_no{1,ns} '.mat'],'AvgSource','source_tw')
+        save(['AvgSource_' cond{1,nc} '_sub' sub_no{1,ns} '.mat'],'AvgFullSource','source_tw')
     end
     save(['AvgSource_ERP_' cond{1,nc} '.mat'],'all_*','-v7.3')
 end
