@@ -70,7 +70,7 @@ leadfield   = ft_prepare_leadfield(cfg);
 cd([mainpath '/TMS+EEGstudy/'])
 save('Files4source.mat','elec','vol','leadfield');
 
-%% step 2: source estimation: ERP-based source activity
+%% step 2: source estimation: ERP-based source activity (optional)
 sub_no = {'01','02','03','04','05','06','07','08','09','10','11','12','13','14',...
     '15','16','17','18','19','20','21','22','23','24','25','26','27','28','29',...
     '30','31','32','33','34','35','36','37','38','39','40','41','42','43'};
