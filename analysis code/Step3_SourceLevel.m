@@ -359,7 +359,7 @@ cfg.roi = ROI_Name{roi_id};
 roi_mask = ft_volumelookup(cfg,AvgPostSource);
 roi_mask =logical(reshape(roi_mask,[18*23*18,1]));
 roi_loc = AvgPostSource.pos(roi_mask,:);
-target_loc = repmat([-36,26,42],size(roi_loc,1),1);% seed at lDLPFC
+target_loc = repmat([-36,26,42],size(roi_loc,1),1);% seed at lDLPFC and need to be changed accordingly
 distance = sqrt(sum((roi_loc-target_loc).^2,2));
 %% compute SCD and SCS for ROIs
 for nc=1:5
