@@ -65,11 +65,11 @@ for nc=1:4
         
         for t = 1:length(AvgPostSource.time)
             [ns, t]
-           % AvgPostSource.avg.pow(AvgPostSource.inside) = TimeCourse(:,t);            
-           % ROI_freqSCD{nf}(k,t) = nansum(AvgPostSource.avg.pow(roi_mask));
+             AvgPostSource.avg.pow(AvgPostSource.inside) = TimeCourse(:,t);            
+             ROI_freqSCD{nf}(k,t) = nansum(AvgPostSource.avg.pow(roi_mask));
             
-            AvgPostSource.avg.pow(AvgPostSource.inside) = Mask(:,t);
-            ROI_freqSCS{nf}(k,t) = nansum(AvgPostSource.avg.pow(roi_mask).* distance);
+           % AvgPostSource.avg.pow(AvgPostSource.inside) = Mask(:,t);
+           % ROI_freqSCS{nf}(k,t) = nansum(AvgPostSource.avg.pow(roi_mask).* distance);
                                    
         end
         end
@@ -78,20 +78,20 @@ for nc=1:4
     
     switch nc
         case 1
-           % Active_pre_freqSCD = ROI_freqSCD;
-            Active_pre_freqSCS = ROI_freqSCS;
+            Active_pre_freqSCD = ROI_freqSCD;
+           % Active_pre_freqSCS = ROI_freqSCS;
         case 2
-           % Active_post_freqSCD = ROI_freqSCD;
-            Active_post_freqSCS = ROI_freqSCS;
+            Active_post_freqSCD = ROI_freqSCD;
+           % Active_post_freqSCS = ROI_freqSCS;
         case 3
-           % Sham_pre_freqSCD = ROI_freqSCD;
-            Sham_pre_freqSCS = ROI_freqSCS;
+            Sham_pre_freqSCD = ROI_freqSCD;
+           % Sham_pre_freqSCS = ROI_freqSCS;
         case 4
-           % Sham_post_freqSCD = ROI_freqSCD;
-            Sham_post_freqSCS = ROI_freqSCS;
+            Sham_post_freqSCD = ROI_freqSCD;
+           % Sham_post_freqSCS = ROI_freqSCS;
         case 5
-           % HC_freqSCD = ROI_freqSCD;
-            HC_freqSCS = ROI_freqSCS;
+            HC_freqSCD = ROI_freqSCD;
+           % HC_freqSCS = ROI_freqSCS;
     end
 end
 cd /Volumes/SizhuFiles/TMS+EEGstudy/Source2_Data
