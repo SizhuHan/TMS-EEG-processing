@@ -586,13 +586,13 @@ source_int  = ft_sourceinterpolate(cfg, AvgPostSource, mri);
 %aal               = ft_read_atlas('/Users/tristahan/Lib_Matlab/fieldtrip-20161231/template/atlas/aal/ROI_MNI_V4.nii');
 aal         = ft_read_atlas('/Users/tristahan/Lib_Matlab/fieldtrip-20161231/template/atlas/aal/ROI_MNI_V7.nii');
 aal.coordsys = 'mni';
-aal.tissue = aal.brick0;
-aal.tissuelabel = aal.brick0label;
+aal.tissue = aal.parcellation;
+aal.tissuelabel = aal.parcellationlabel;
 load('/Users/tristahan/Lib_Matlab/spm12/toolbox/AAL3/ROI_MNI_V7_List.mat');% label name
 for i=1:length(ROI)
     aal.tissuelabel{ROI(i).ID} = ROI(i).Nom_L;
 end
-aal = rmfield(aal,{'brick0label','brick0'});
+aal = rmfield(aal,{'parcellationlabel','parcellation'});
 
 cfg=[];
 cfg.atlas = aal;
